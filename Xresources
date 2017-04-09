@@ -1,0 +1,5 @@
+#include ".Xresources.d/solarized"
+
+URxvt.font: xft:Monospace:pixelsize=14
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
