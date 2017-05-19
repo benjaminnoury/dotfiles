@@ -1,0 +1,21 @@
+cfb	~/dotfiles/bashrc.base && refresh
+cfba	~/.bash_aliases && refresh
+cfo	~/.config/openbox/lubuntu-rc.xml && openbox --reconfigure
+cfv	~/.vimrc
+cfva	~/.vim/snippets
+cfr	~/dotfiles/ranger/rc.conf.base
+cfi	~/.i3/config
+cfib	~/.config/i3blocks/config
+cfm	~/.config/mutt/muttrc
+cfM	~/.moc/keymap
+cff	~/dotfiles/scripts/folders
+cfc	~/dotfiles/scripts/configs
+eb	~/Documents/LaTeX/uni.bib
+cfg	~/.config/mutt/gmail.conf
+cfC	~/.config/mutt/cock.conf
+cfa	~/.config/mutt/aliases
+cfm	~/.moc/config
+cfx	~/bin/xrandr_switch
+cffc	~/dotfiles/scripts/raccourcis.py
+cfs	~/.vim/bundle/vim-snippets/UltiSnips/tex.snippets
+cft	/home/ben/texmf/tex/latex/CoursNoury/recours.cls

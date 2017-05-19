@@ -1,0 +1,50 @@
+search glen
+fin
+open_with atril
+open_with v
+search tmp
+!tar xvfz lukerice.tar.gz
+shell tar xvfz %s
+shell mv %s ~/Projets/
+set colorscheme zenburn
+shell q
+find j
+w
+wq
+shell mv %f
+rename 
+rename reigns_install
+ex 
+execute_command 
+shell ./%s
+chmo
+shell ./reigns_install
+delete 
+search 
+shell touch mpd
+shell chmod +x %s
+wget 
+shell wget https://raw.githubusercontent.com/zakariaGatter/i3blocks-gate/master/Ubuntu-i3blocks/mpd.sh
+search tex
+cd /tmp
+open_with e
+rename 0_TP_MCC_MAXPid
+shell mkdir src
+shell unzip %f
+open_with scilab
+rename exploi
+rename exploitationMesures.sce
+open_with sci
+s
+shell cfz
+shell:
+shell touch montage.tex
+shell cp mcc.tex montage.tex
+shell %s
+shell 
+shell cfv
+shell mkdir Donnees\ TP
+shell mv %m .
+
+delete
+open_with 

@@ -1,0 +1,12 @@
+set default-bgcolor \#3F3F3F
+# set inputbar-fgcolor #dcdccc
+# set inputbar-bgcolor #3f3f3f
+# set statusbar-bgcolor #2f2f2f
+# set statusbar-fgcolor #dcaf8f
+
+set recolor-darkcolor \#3f3f3f
+set recolor-lightcolor \#DCDCDC
+set recolor true
+
+map <c-m> rotate-cw
+map <c-!> rotate-ccw

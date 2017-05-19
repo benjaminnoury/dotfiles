@@ -1,0 +1,143 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+alias	/home/ben/dotfiles/ranger/commands.py	/^class alias(Command):$/;"	c	language:Python
+allow_abbrev	/home/ben/dotfiles/ranger/commands.py	/^    allow_abbrev = False$/;"	v	language:Python	class:delete
+allow_abbrev	/home/ben/dotfiles/ranger/commands.py	/^    allow_abbrev = False$/;"	v	language:Python	class:quit_bang
+AS_YOU_TYPE	/home/ben/dotfiles/ranger/commands.py	/^    AS_YOU_TYPE     = 't'$/;"	v	language:Python	class:scout
+AUTO_OPEN	/home/ben/dotfiles/ranger/commands.py	/^    AUTO_OPEN       = 'a'$/;"	v	language:Python	class:scout
+bulkrename	/home/ben/dotfiles/ranger/commands.py	/^class bulkrename(Command):$/;"	c	language:Python
+cancel	/home/ben/dotfiles/ranger/commands.py	/^    def cancel(self):$/;"	m	language:Python	class:scout
+cd	/home/ben/dotfiles/ranger/commands.py	/^class cd(Command):$/;"	c	language:Python
+chain	/home/ben/dotfiles/ranger/commands.py	/^class chain(Command):$/;"	c	language:Python
+chmod	/home/ben/dotfiles/ranger/commands.py	/^class chmod(Command):$/;"	c	language:Python
+cmap	/home/ben/dotfiles/ranger/commands.py	/^class cmap(map_):$/;"	c	language:Python
+console	/home/ben/dotfiles/ranger/commands.py	/^class console(Command):$/;"	c	language:Python
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'browser'$/;"	v	language:Python	class:alias
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'browser'$/;"	v	language:Python	class:copymap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'browser'$/;"	v	language:Python	class:cunmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'browser'$/;"	v	language:Python	class:map_
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'browser'$/;"	v	language:Python	class:unmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'console'$/;"	v	language:Python	class:cmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'console'$/;"	v	language:Python	class:copycmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'pager'$/;"	v	language:Python	class:copypmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'pager'$/;"	v	language:Python	class:pmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'pager'$/;"	v	language:Python	class:punmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'taskview'$/;"	v	language:Python	class:copytmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'taskview'$/;"	v	language:Python	class:tmap
+context	/home/ben/dotfiles/ranger/commands.py	/^    context = 'taskview'$/;"	v	language:Python	class:tunmap
+copycmap	/home/ben/dotfiles/ranger/commands.py	/^class copycmap(copymap):$/;"	c	language:Python
+copymap	/home/ben/dotfiles/ranger/commands.py	/^class copymap(Command):$/;"	c	language:Python
+copypmap	/home/ben/dotfiles/ranger/commands.py	/^class copypmap(copymap):$/;"	c	language:Python
+copytmap	/home/ben/dotfiles/ranger/commands.py	/^class copytmap(copymap):$/;"	c	language:Python
+copy_buffer_filename	/home/ben/dotfiles/ranger/commands.py	/^    copy_buffer_filename = 'copy_buffer'$/;"	v	language:Python	class:load_copy_buffer
+copy_buffer_filename	/home/ben/dotfiles/ranger/commands.py	/^    copy_buffer_filename = 'copy_buffer'$/;"	v	language:Python	class:save_copy_buffer
+cunmap	/home/ben/dotfiles/ranger/commands.py	/^class cunmap(unmap):$/;"	c	language:Python
+delete	/home/ben/dotfiles/ranger/commands.py	/^class delete(Command):$/;"	c	language:Python
+diff	/home/ben/dotfiles/ranger/commands.py	/^class diff(Command):$/;"	c	language:Python
+do_mark	/home/ben/dotfiles/ranger/commands.py	/^    do_mark = False$/;"	v	language:Python	class:unmark_tag
+do_mark	/home/ben/dotfiles/ranger/commands.py	/^    do_mark = True$/;"	v	language:Python	class:mark_tag
+edit	/home/ben/dotfiles/ranger/commands.py	/^class edit(Command):$/;"	c	language:Python
+escape_macros_for_shell	/home/ben/dotfiles/ranger/commands.py	/^    escape_macros_for_shell = True$/;"	v	language:Python	class:shell
+eval_	/home/ben/dotfiles/ranger/commands.py	/^class eval_(Command):$/;"	c	language:Python
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:alias
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:bulkrename
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:cd
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:chain
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:chmod
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:console
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:copymap
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:delete
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:diff
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:edit
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:eval_
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:grep
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:help_
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:load_copy_buffer
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:log
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:map_
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:mark_tag
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:mkdir
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:open_with
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:quit
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:quitall
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:relink
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:rename
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:save_copy_buffer
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:scout
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:setintag
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:setlocal
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:set_
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:shell
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:stage
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:terminal
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:touch
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:unmap
+execute	/home/ben/dotfiles/ranger/commands.py	/^    def execute(self):$/;"	m	language:Python	class:unstage
+FILTER	/home/ben/dotfiles/ranger/commands.py	/^    FILTER          = 'f'$/;"	v	language:Python	class:scout
+grep	/home/ben/dotfiles/ranger/commands.py	/^class grep(Command):$/;"	c	language:Python
+help_	/home/ben/dotfiles/ranger/commands.py	/^class help_(Command):$/;"	c	language:Python
+IGNORE_CASE	/home/ben/dotfiles/ranger/commands.py	/^    IGNORE_CASE     = 'i'$/;"	v	language:Python	class:scout
+INVERT	/home/ben/dotfiles/ranger/commands.py	/^    INVERT          = 'v'$/;"	v	language:Python	class:scout
+KEEP_OPEN	/home/ben/dotfiles/ranger/commands.py	/^    KEEP_OPEN       = 'k'$/;"	v	language:Python	class:scout
+load_copy_buffer	/home/ben/dotfiles/ranger/commands.py	/^class load_copy_buffer(Command):$/;"	c	language:Python
+log	/home/ben/dotfiles/ranger/commands.py	/^class log(Command):$/;"	c	language:Python
+map_	/home/ben/dotfiles/ranger/commands.py	/^class map_(Command):$/;"	c	language:Python
+MARK	/home/ben/dotfiles/ranger/commands.py	/^    MARK            = 'm'$/;"	v	language:Python	class:scout
+mark_tag	/home/ben/dotfiles/ranger/commands.py	/^class mark_tag(Command):$/;"	c	language:Python
+mkdir	/home/ben/dotfiles/ranger/commands.py	/^class mkdir(Command):$/;"	c	language:Python
+name	/home/ben/dotfiles/ranger/commands.py	/^    name = 'eval'$/;"	v	language:Python	class:eval_
+name	/home/ben/dotfiles/ranger/commands.py	/^    name = 'help'$/;"	v	language:Python	class:help_
+name	/home/ben/dotfiles/ranger/commands.py	/^    name = 'map'$/;"	v	language:Python	class:map_
+name	/home/ben/dotfiles/ranger/commands.py	/^    name = 'quit!'$/;"	v	language:Python	class:quit_bang
+name	/home/ben/dotfiles/ranger/commands.py	/^    name = 'set'  # don't override the builtin set class$/;"	v	language:Python	class:set_
+OPEN_ON_ENTER	/home/ben/dotfiles/ranger/commands.py	/^    OPEN_ON_ENTER   = 'e'$/;"	v	language:Python	class:scout
+open_with	/home/ben/dotfiles/ranger/commands.py	/^class open_with(Command):$/;"	c	language:Python
+PATH_RE	/home/ben/dotfiles/ranger/commands.py	/^    PATH_RE = re.compile(r'^\\s*path="?(.*?)"?\\s*$')$/;"	v	language:Python	class:setlocal
+PERM_FILTER	/home/ben/dotfiles/ranger/commands.py	/^    PERM_FILTER     = 'p'$/;"	v	language:Python	class:scout
+pmap	/home/ben/dotfiles/ranger/commands.py	/^class pmap(map_):$/;"	c	language:Python
+punmap	/home/ben/dotfiles/ranger/commands.py	/^class punmap(unmap):$/;"	c	language:Python
+quick	/home/ben/dotfiles/ranger/commands.py	/^    def quick(self):$/;"	m	language:Python	class:scout
+quit	/home/ben/dotfiles/ranger/commands.py	/^class quit(Command):$/;"	c	language:Python
+quitall	/home/ben/dotfiles/ranger/commands.py	/^class quitall(Command):$/;"	c	language:Python
+quit_bang	/home/ben/dotfiles/ranger/commands.py	/^class quit_bang(quitall):$/;"	c	language:Python
+relink	/home/ben/dotfiles/ranger/commands.py	/^class relink(Command):$/;"	c	language:Python
+rename	/home/ben/dotfiles/ranger/commands.py	/^class rename(Command):$/;"	c	language:Python
+resolve_macros	/home/ben/dotfiles/ranger/commands.py	/^    resolve_macros = False$/;"	v	language:Python	class:alias
+resolve_macros	/home/ben/dotfiles/ranger/commands.py	/^    resolve_macros = False$/;"	v	language:Python	class:eval_
+resolve_macros	/home/ben/dotfiles/ranger/commands.py	/^    resolve_macros = False$/;"	v	language:Python	class:map_
+save_copy_buffer	/home/ben/dotfiles/ranger/commands.py	/^class save_copy_buffer(Command):$/;"	c	language:Python
+scout	/home/ben/dotfiles/ranger/commands.py	/^class scout(Command):$/;"	c	language:Python
+setintag	/home/ben/dotfiles/ranger/commands.py	/^class setintag(setlocal):$/;"	c	language:Python
+setlocal	/home/ben/dotfiles/ranger/commands.py	/^class setlocal(set_):$/;"	c	language:Python
+set_	/home/ben/dotfiles/ranger/commands.py	/^class set_(Command):$/;"	c	language:Python
+shell	/home/ben/dotfiles/ranger/commands.py	/^class shell(Command):$/;"	c	language:Python
+SMART_CASE	/home/ben/dotfiles/ranger/commands.py	/^    SMART_CASE      = 's'$/;"	v	language:Python	class:scout
+SM_GLOB	/home/ben/dotfiles/ranger/commands.py	/^    SM_GLOB         = 'g'$/;"	v	language:Python	class:scout
+SM_LETTERSKIP	/home/ben/dotfiles/ranger/commands.py	/^    SM_LETTERSKIP   = 'l'$/;"	v	language:Python	class:scout
+SM_REGEX	/home/ben/dotfiles/ranger/commands.py	/^    SM_REGEX        = 'r'$/;"	v	language:Python	class:scout
+stage	/home/ben/dotfiles/ranger/commands.py	/^class stage(Command):$/;"	c	language:Python
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:cd
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:edit
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:mkdir
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:open_with
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:relink
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:rename
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:scout
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:set_
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:shell
+tab	/home/ben/dotfiles/ranger/commands.py	/^    def tab(self):$/;"	m	language:Python	class:touch
+terminal	/home/ben/dotfiles/ranger/commands.py	/^class terminal(Command):$/;"	c	language:Python
+tmap	/home/ben/dotfiles/ranger/commands.py	/^class tmap(map_):$/;"	c	language:Python
+touch	/home/ben/dotfiles/ranger/commands.py	/^class touch(Command):$/;"	c	language:Python
+tunmap	/home/ben/dotfiles/ranger/commands.py	/^class tunmap(unmap):$/;"	c	language:Python
+unmap	/home/ben/dotfiles/ranger/commands.py	/^class unmap(Command):$/;"	c	language:Python
+UNMARK	/home/ben/dotfiles/ranger/commands.py	/^    UNMARK          = 'M'$/;"	v	language:Python	class:scout
+unmark_tag	/home/ben/dotfiles/ranger/commands.py	/^class unmark_tag(mark_tag):$/;"	c	language:Python
+unstage	/home/ben/dotfiles/ranger/commands.py	/^class unstage(Command):$/;"	c	language:Python
+_build_regex	/home/ben/dotfiles/ranger/commands.py	/^    def _build_regex(self):$/;"	m	language:Python	class:scout
+_count	/home/ben/dotfiles/ranger/commands.py	/^    def _count(self, move=False, offset=0):$/;"	m	language:Python	class:scout
+_get_app_flags_mode	/home/ben/dotfiles/ranger/commands.py	/^    def _get_app_flags_mode(self, string):$/;"	m	language:Python	class:open_with
+_is_app	/home/ben/dotfiles/ranger/commands.py	/^    def _is_app(self, arg):$/;"	m	language:Python	class:open_with
+_is_flags	/home/ben/dotfiles/ranger/commands.py	/^    def _is_flags(self, arg):$/;"	m	language:Python	class:open_with
+_is_mode	/home/ben/dotfiles/ranger/commands.py	/^    def _is_mode(self, arg):$/;"	m	language:Python	class:open_with
+_question_callback	/home/ben/dotfiles/ranger/commands.py	/^    def _question_callback(self, answer):$/;"	m	language:Python	class:delete
+__init__	/home/ben/dotfiles/ranger/commands.py	/^    def __init__(self, *args, **kws):$/;"	m	language:Python	class:scout
