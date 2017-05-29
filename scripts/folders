@@ -1,5 +1,5 @@
 u	/media/ben/ARCH_2014042/00_aImprimer
-p	~/projets
+p	~/Projets
 h	~
 wp	~/wallpapers
 r	~/
@@ -7,4 +7,5 @@ t	~/Modèles
 dot	~/dotfiles
 D	/tmp
 j	~/Vrac/jeux
-v	~/Vrac/Vidéos
+vv	~/Vrac/Vidéos
+m	~/Musique/Bibliotheque/00_A_ecouter

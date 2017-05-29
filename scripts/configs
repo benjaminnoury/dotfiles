@@ -19,3 +19,4 @@ cfx	~/bin/xrandr_switch
 cffc	~/dotfiles/scripts/raccourcis.py
 cfs	~/.vim/bundle/vim-snippets/UltiSnips/tex.snippets
 cft	/home/ben/texmf/tex/latex/CoursNoury/recours.cls
+cfX	~/.Xressources

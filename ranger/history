@@ -1,26 +1,4 @@
-search glen
-fin
-open_with atril
-open_with v
-search tmp
-!tar xvfz lukerice.tar.gz
-shell tar xvfz %s
-shell mv %s ~/Projets/
-set colorscheme zenburn
-shell q
-find j
-w
-wq
-shell mv %f
-rename 
-rename reigns_install
-ex 
-execute_command 
-shell ./%s
-chmo
-shell ./reigns_install
 delete 
-search 
 shell touch mpd
 shell chmod +x %s
 wget 
@@ -45,6 +23,28 @@ shell
 shell cfv
 shell mkdir Donnees\ TP
 shell mv %m .
-
 delete
+search 
+help 
+cd 
+shell lxterminal -e ra
+shell lxterminal -e ranger
+shell lxterminal 
+
+open_with v
+rename 
+rename 7-th_meca_Statique.mf
+open_with vim
+open_with atril
+search
+rename Rosenberg Trio - Evan Christopher-oaejMc_wngM.mp3
+rename Rosenberg Trio - Evan Christopher - Indiference.mp3
 open_with 
+open_with 1
+rename Indifférence Indifference.mp3
+rename Indifférence Lubat Minvielle.mp3
+shell make
+cfv
+shell mkdir corrige
+rename 3-AnnexeRlt.md
+rename corrTopTour.png

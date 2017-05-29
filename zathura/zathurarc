@@ -5,7 +5,8 @@ set default-bgcolor \#3F3F3F
 # set statusbar-fgcolor #dcaf8f
 
 set recolor-darkcolor \#3f3f3f
-set recolor-lightcolor \#DCDCDC
+set recolor-lightcolor \#ffffff
+#set recolor-lightcolor \#DCDCDC
 set recolor true
 
 map <c-m> rotate-cw

@@ -154,8 +154,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 	" return 'rifle ' . shellescape(expand(a:file,':p'))
 " endfunction
 
-map <F9> :w<CR>:Start! pandoc-latex % <CR>
-map <F8> :w<CR>:Start! xelatex % <CR>
+au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
+au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
+au FileType tex map <F8> :w<CR>:Start! xelatex % <CR>
+au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
 
 augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
