@@ -5,7 +5,24 @@ URxvt.font: xft:Menlo for Powerline:size=9
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
 
-! ----------------------------------------------------------------------------e
+! URLs Cliquables
+
+URxvt.perl-ext-common: default,matcher,tabbed
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+
+URxvt.keysym.Control-t: command:\033]11;[80]#000\007
+URxvt.keysym.Control-M-t: command:\033]11;#000\007
+
+URxvt*transparent: true
+URxvt*shading: 10
+! ----------------------------------------------------------------------------
 ! ROFI Color theme
 ! -------------------------------------------------------------------------------
 !rofi.color-enabled: true

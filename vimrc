@@ -1,12 +1,7 @@
 " File: .vimrc
 " Adapté de  Jake Zimmerman <jake@zimmerman.io>
 "
-" How I configure Vim :P
-"
-
-" Gotta be first
 set nocompatible
-
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,8 +10,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " ----- Making Vim look good ------------------------------------------
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dylanaraps/wal.vim'
+
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'francoiscabrol/ranger.vim'
@@ -26,6 +23,8 @@ Plugin 'tpope/vim-dispatch'
 "Plugin 'majutsushi/tagbar'
 "Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'vim-scripts/a.vim'
+Plugin 'KabbAmine/vCoolor.vim'
+Plugin 'lilydjwg/colorizer'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -48,6 +47,16 @@ Plugin 'honza/vim-snippets'
 " ---- Pandoc/markdown Stuff ------------------------------------------
 Plugin 'dhruvasagar/vim-table-mode'
 
+
+" ---- Gmail in Vim : Vmail -------------------------------------------
+" Plugin 'danchoi/vmail'
+
+
+" Pour todo.txt
+Plugin 'elentok/todo.vim'
+Plugin 'freitass/todo.txt-vim'
+
+
 " ---- Extras/Advanced plugins ----------------------------------------
 " Highlight and strip trailing whitespace
 "Plugin 'ntpeters/vim-better-whitespace'
@@ -65,6 +74,9 @@ Plugin 'dhruvasagar/vim-table-mode'
 "Plugin 'tpope/vim-liquid'
 "Plugin 'cakebaker/scss-syntax.vim'
 
+" ---- Syntax Plugins -------------------------------------------------
+Plugin 'PotatoesMaster/i3-vim-syntax'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -72,6 +84,7 @@ filetype plugin indent on
 
 " --- General settings ---
 let mapleader=','
+let maplocalleader='_'
 set backspace=indent,eol,start
 set ruler
 set number 
@@ -81,6 +94,7 @@ set ignorecase
 set smartcase 
 set hlsearch 
 nnoremap n nzz 
+
 
 syntax on
 set mouse=a
@@ -92,7 +106,7 @@ set mouse=a
 " ----- Plugin-Specific Settings --------------------------------------
 
 " Set the colorscheme
-colorscheme zenburn
+colorscheme wal
 set t_co=256
 
 " ----- bling/vim-airline settings -----
@@ -113,7 +127,7 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 
 " Use the solarized theme for the Airline status bar
-let g:airline_theme='zenburn'
+let g:airline_theme='wal'
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
@@ -135,7 +149,7 @@ augroup END
 noremap K :SuperMan <cword><CR>
 
 " ----- Ultisnip ----------------------
-let g:UltiSnipsUsePythonVersion=2
+let g:UltiSnipsUsePythonVersion=3
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
@@ -154,14 +168,27 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 	" return 'rifle ' . shellescape(expand(a:file,':p'))
 " endfunction
 
-au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
-au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
-au FileType tex map <F8> :w<CR>:Start! xelatex % <CR>
-au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
-
 augroup pandoc_syntax
 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
+
+
+
+au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
+au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
+au FileType markdown.pandoc inoremap <F5> <Esc>:w<CR>:Start! make view % <CR>
+au FileType markdown.pandoc map <F5> <Esc>:w<CR>:Start! make view % <CR>
+
+au FileType tex inoremap <F8> <Esc>:w<CR>:Start! xelatex % <CR>
+
+
+au! BufNewFile,BufFilePre,BufRead *.uml set filetype=uml
+au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
+
+" Make calcurse notes markdown
+autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
+
 
 " Table mode settings
 let g:table_mode_corner='|'
@@ -169,3 +196,6 @@ let g:table_mode_corner='|'
 " selection d'un buffer avec ,f
 nmap <leader>b :ls<CR>:e#
 
+
+
+hi clear conceal

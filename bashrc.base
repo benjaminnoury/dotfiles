@@ -8,6 +8,8 @@ case $- in
       *) return;;
 esac
 
+(wal -r &)
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -56,12 +58,16 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PECHE="\[$(tput setaf 209)\]"
+#. "~/.cache/wal/colors.sh"
+
+
+COL7="\[$(tput setaf 1)\]"
+COL5="\[$(tput setaf 5)\]"
 RESET="\[$(tput sgr0)\]"
 
 if [ "$color_prompt" = yes ]; then
 #	PS1='\e[1m\e[38;5;214m\w : \[\e[0m\]'
-	PS1="${PECHE}\w >${RESET} "
+	PS1="${COL7}\u ${COL5}\w >${RESET} "
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	PS1="${PECHE}\w >${RESET} "
@@ -124,6 +130,8 @@ fi
 
 alias o="rifle"
 alias l="ls -t"
+alias todo="vim +Todo"
+alias g="geany"
 
 vman() {
      vim -c "SuperMan $*"
@@ -131,3 +139,7 @@ vman() {
        echo "No manual entry for $*"
      fi
 }
+
+complete -o default -o nospace -F man vman
+
+# set -o vi

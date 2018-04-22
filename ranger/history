@@ -1,50 +1,50 @@
-delete 
-shell touch mpd
-shell chmod +x %s
-wget 
-shell wget https://raw.githubusercontent.com/zakariaGatter/i3blocks-gate/master/Ubuntu-i3blocks/mpd.sh
-search tex
-cd /tmp
-open_with e
-rename 0_TP_MCC_MAXPid
-shell mkdir src
-shell unzip %f
-open_with scilab
-rename exploi
-rename exploitationMesures.sce
-open_with sci
-s
-shell cfz
-shell:
-shell touch montage.tex
-shell cp mcc.tex montage.tex
-shell %s
-shell 
-shell cfv
-shell mkdir Donnees\ TP
-shell mv %m .
-delete
-search 
-help 
-cd 
-shell lxterminal -e ra
-shell lxterminal -e ranger
-shell lxterminal 
 
-open_with v
-rename 
-rename 7-th_meca_Statique.mf
-open_with vim
-open_with atril
-search
-rename Rosenberg Trio - Evan Christopher-oaejMc_wngM.mp3
-rename Rosenberg Trio - Evan Christopher - Indiference.mp3
-open_with 
-open_with 1
-rename Indifférence Indifference.mp3
-rename Indifférence Lubat Minvielle.mp3
+shell na
 shell make
-cfv
-shell mkdir corrige
-rename 3-AnnexeRlt.md
-rename corrTopTour.png
+open_with 1
+shell wget -c wp
+rename Energetique
+open_with 2
+search f
+fixa
+search fixat
+shell youtube-dl -xic --audio-format mp3 https://www.youtube.com/watch?v=eT4shwU4Yc4
+search 
+mkdir SagesCommeDesSauvages
+shell youtube-dl -xic --audio-format mp3 https://www.youtube.com/watch?v=gVFHDiEytVY&list=PLYsAOL0utpeq4LfWrRm58DRQzkaMQ-Tgv
+search doc
+search t
+cd /
+open_with 0
+find 
+cd  /
+man
+search man
+mkdir Films
+rename a_voir.md
+open_with a
+rename Les Revenants S01E01
+rename Les Revenants S01E02
+rename Les Revenants S01E03
+rename Les Revenants S01E04
+rename Les Revenants S01E05
+rename Les Revenants S01E06
+rename Les Revenants S01E07
+rename Les Revenants S01E08
+w
+rename Dr. Strangelove or How I Learned to Stop Worrying and Love the Bomb (1964)
+bulkrename 
+mkdir 
+mkdir Pour\ Mathilde
+mkdir Pour Mathilde
+open_with 
+rename Neut
+search vrac
+cd /mnt/
+search CD
+cd 
+rename Game.of.Thrones.S01E09.FRENCH.LD.HDTV.XviD-JMT.avi
+rename Game.of.Thrones.S01E10.FiNAL.FRENCH.LD.HDTV.XviD-JMT.avi
+delete
+open_with gpicview
+open_with evince

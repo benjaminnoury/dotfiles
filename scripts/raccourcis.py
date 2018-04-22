@@ -31,8 +31,8 @@ with open("/home/ben/dotfiles/scripts/folders") as fold:
 with open("/home/ben/dotfiles/scripts/configs") as conf:
     for line in csv.reader(conf, dialect="excel-tab"):
         #print(line)
-        bash+=("alias "+line[0]+"=\"vim "+line[1]+"\"\n")
-        rang+=("map "+line[0]+" shell vim "+line[1]+"\n")
+        bash+=("alias "+line[0]+"=\"geany "+line[1]+"\"\n")
+        rang+=("map "+line[0]+" shell geany "+line[1]+"\n")
 
 #print(bash)
 
