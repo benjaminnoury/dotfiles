@@ -115,32 +115,26 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
-" ----- jez/vim-superman settings -----
-" better man page support
-noremap K :SuperMan <cword><CR>
+
+" Diverses options pour Pandoc
+	augroup pandoc_syntax
+		au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+	augroup END
 
 
+	au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
+	au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
+	au FileType markdown.pandoc inoremap <F5> <Esc>:w<CR>:Start! make view % <CR>
+	au FileType markdown.pandoc map <F5> <Esc>:w<CR>:Start! make view % <CR>
 
-" function! MyPandocOpen(file)
-	" return 'rifle ' . shellescape(expand(a:file,':p'))
-" endfunction
+	au FileType tex inoremap <F8> <Esc>:w<CR>:Start! xelatex % <CR>
 
-augroup pandoc_syntax
-	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
-augroup END
+" Vérification du langage avec F6
+	map <F6> :setlocal spell! spelllang=fr<CR>
 
-
-
-au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
-au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
-au FileType markdown.pandoc inoremap <F5> <Esc>:w<CR>:Start! make view % <CR>
-au FileType markdown.pandoc map <F5> <Esc>:w<CR>:Start! make view % <CR>
-
-au FileType tex inoremap <F8> <Esc>:w<CR>:Start! xelatex % <CR>
-
-
-au! BufNewFile,BufFilePre,BufRead *.uml set filetype=uml
-au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
+" PlantUML
+	au! BufNewFile,BufFilePre,BufRead *.uml set filetype=uml
+	au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
 
 " les notes de Calcurse sont considérés du Markdown
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
@@ -162,7 +156,7 @@ let g:netrw_liststyle=3		" tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
-" goyo Goyo
+" goyo : Écriture sans distractions
 	map <F10> :Goyo<CR>
 	map <leader>f :Goyo \| set linebreak<CR>
 	inoremap <F10> <esc>:Goyo<CR>a
@@ -179,13 +173,6 @@ hi clear conceal
 	map <Space><Tab> <Esc>/<++><Enter>"_c4l
 	inoremap ;gui <++>
 """ Markdown
-	autocmd FileType tex,markdown.pandoc inoremap ;m $$<Space><++><Esc>2T$i
-	autocmd FileType tex,markdown.pandoc inoremap ;& <Enter>#<Space><Enter><Enter><++><Esc>2kA
-	autocmd FileType tex,markdown.pandoc inoremap ;é <Enter>##<Space><Enter><Enter><++><Esc>2kA
-	autocmd FileType tex,markdown.pandoc inoremap ;" <Enter>###<Space><Enter><Enter><++><Esc>2kA
-	autocmd FileType tex,markdown.pandoc inoremap ;i **<++><Esc>F*i
-	autocmd FileType tex,markdown.pandoc inoremap ;b ****<++><Esc>F*hi
-	autocmd FileType tex,markdown.pandoc inoremap w<Tab>  \wedge<Space>
-	autocmd FileType tex,markdown.pandoc inoremap v<Tab> \overrightarrow{}<Space><++><Esc>F{a
+	so ~/.vim/Nounou/mdSnippets.vim
 
 
