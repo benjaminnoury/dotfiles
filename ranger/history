@@ -1,22 +1,7 @@
-
-shell na
-shell make
-open_with 1
-shell wget -c wp
-rename Energetique
-open_with 2
-search f
-fixa
-search fixat
-shell youtube-dl -xic --audio-format mp3 https://www.youtube.com/watch?v=eT4shwU4Yc4
-search 
-mkdir SagesCommeDesSauvages
-shell youtube-dl -xic --audio-format mp3 https://www.youtube.com/watch?v=gVFHDiEytVY&list=PLYsAOL0utpeq4LfWrRm58DRQzkaMQ-Tgv
 search doc
 search t
 cd /
 open_with 0
-find 
 cd  /
 man
 search man
@@ -37,7 +22,6 @@ bulkrename
 mkdir 
 mkdir Pour\ Mathilde
 mkdir Pour Mathilde
-open_with 
 rename Neut
 search vrac
 cd /mnt/
@@ -48,3 +32,19 @@ rename Game.of.Thrones.S01E10.FiNAL.FRENCH.LD.HDTV.XviD-JMT.avi
 delete
 open_with gpicview
 open_with evince
+mkdir 0 ParcoursSup
+search tmp
+cd /tmp
+shell ln -s "/home/ben/Projets/0 ParcoursSup" /home/ben/Projets/
+shell 
+rename audio-channel-front-center.oga
+rename camera-shutter.oga
+open_with 
+open_with 1
+mkdir tkinter
+find 
+mkdir Hydraulique
+search day
+search gaphi
+search grap
+cd  R

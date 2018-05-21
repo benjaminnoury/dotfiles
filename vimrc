@@ -4,6 +4,8 @@
 set nocompatible
 filetype off
 
+
+"""" Plugins ----------------------------------------------------------
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -12,11 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 " ----- Making Vim look good ------------------------------------------
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
-Plugin 'dylanaraps/wal.vim'
+" Plugin 'dylanaraps/wal.vim'
 
+" ---- Vim Wiki
+Plugin 'vimwiki/vimwiki'
 
 " ----- Vim as a programmer's text editor -----------------------------
-Plugin 'francoiscabrol/ranger.vim'
+" Plugin 'francoiscabrol/ranger.vim'
 Plugin 'tpope/vim-dispatch'
 "Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
@@ -34,45 +38,32 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 
 " ----- man pages, tmux -----------------------------------------------
-Plugin 'jez/vim-superman'
-
+" Plugin 'jez/vim-superman'
+" 
 " ----- Syntax plugins ------------------------------------------------
 " Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+" Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 " ----- Snippets plugins ----------------------------------------------
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
  
 " ---- Pandoc/markdown Stuff ------------------------------------------
 Plugin 'dhruvasagar/vim-table-mode'
-
-
-" ---- Gmail in Vim : Vmail -------------------------------------------
-" Plugin 'danchoi/vmail'
 
 
 " Pour todo.txt
 Plugin 'elentok/todo.vim'
 Plugin 'freitass/todo.txt-vim'
 
+" Goyo permet d'avoir une fenetre propre pour écrire
+Plugin 'junegunn/goyo.vim'
 
 " ---- Extras/Advanced plugins ----------------------------------------
-" Highlight and strip trailing whitespace
-"Plugin 'ntpeters/vim-better-whitespace'
 " Easily surround chunks of text
 "Plugin 'tpope/vim-surround'
 " Align CSV files at commas, align Markdown tables, and more
 " Plugin 'godlygeek/tabular'
-" Automaticall insert the closing HTML tag
-"Plugin 'HTML-AutoCloseTag'
-" Make tmux look like vim-airline (read README for extra instructions)
-"Plugin 'edkolev/tmuxline.vim'
-" All the other syntax plugins I use
-"Plugin 'ekalinin/Dockerfile.vim'
-"Plugin 'digitaltoad/vim-jade'
-"Plugin 'tpope/vim-liquid'
-"Plugin 'cakebaker/scss-syntax.vim'
 
 " ---- Syntax Plugins -------------------------------------------------
 Plugin 'PotatoesMaster/i3-vim-syntax'
@@ -83,55 +74,35 @@ filetype plugin indent on
 
 
 " --- General settings ---
-let mapleader=','
-let maplocalleader='_'
-set backspace=indent,eol,start
-set ruler
-set number 
-set showcmd
-set incsearch
-set ignorecase 
-set smartcase 
-set hlsearch 
-nnoremap n nzz 
+	let mapleader=','
+	let maplocalleader='_'
+	set backspace=indent,eol,start
+	set ruler
+	set number 
+	set relativenumber
+	set showcmd
+	set incsearch
+	set ignorecase 
+	set smartcase 
+	set hlsearch 
+	nnoremap n nzz 
+	set encoding=utf-8
 
-
-syntax on
-set mouse=a
+	syntax on
+	set mouse=a
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
-" hi clear SignColumn
+	hi clear SignColumn
 
 " ----- Plugin-Specific Settings --------------------------------------
 
 " Set the colorscheme
-colorscheme wal
-set t_co=256
+	set t_co=256
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
 set laststatus=2
-
-" Fancy arrow symbols, requires a patched font
-" To install a patched font, run over to
-"     https://github.com/abertsch/Menlo-for-Powerline
-" download all the .ttf files, double-click on them and click "Install"
-" Finally, uncomment the next line
-let g:airline_powerline_fonts = 1
-
-" Show PASTE if in paste mode
-let g:airline_detect_paste=1
-
-" Show airline for tabs too
-let g:airline#extensions#tabline#enabled = 1
-
-" Use the solarized theme for the Airline status bar
-let g:airline_theme='wal'
-
-" ----- airblade/vim-gitgutter settings -----
-" In vim-airline, only display "hunks" if the diff is non-zero
-let g:airline#extensions#hunks#non_zero_only = 1
 
 
 " ----- Raimondi/delimitMate settings -----
@@ -148,21 +119,7 @@ augroup END
 " better man page support
 noremap K :SuperMan <cword><CR>
 
-" ----- Ultisnip ----------------------
-let g:UltiSnipsUsePythonVersion=3
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" let g:UltiSnipsSnippetDirectories='/home/ben/dotfiles/snippets'
 
-" ----- Pandoc ----------------------
-" let g:pandoc#modules#disabled = ["folding"]
-" let g:pandoc#command#autoexec_on_writes = 1
-" let g:pandoc#command#autoexec_command = "Pandoc pdf"
-" let g:pandoc#command#latex_engine = "xelatex"
-" let g:pandoc#command#custom_open = "MyPandocOpen"
 
 " function! MyPandocOpen(file)
 	" return 'rifle ' . shellescape(expand(a:file,':p'))
@@ -185,7 +142,7 @@ au FileType tex inoremap <F8> <Esc>:w<CR>:Start! xelatex % <CR>
 au! BufNewFile,BufFilePre,BufRead *.uml set filetype=uml
 au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
 
-" Make calcurse notes markdown
+" les notes de Calcurse sont considérés du Markdown
 autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
 autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 
@@ -196,6 +153,39 @@ let g:table_mode_corner='|'
 " selection d'un buffer avec ,f
 nmap <leader>b :ls<CR>:e#
 
+" Netrw est le gestionnaire de fichier de vim
+" Tweaks
+let g:netrw_banner=0		" désactive l'entête
+let g:netrw_browse_split=4	" ouvrir au premier plan
+let g:netrw_altv=1		" ouvre les splits sur la droite
+let g:netrw_liststyle=3		" tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
+" goyo Goyo
+	map <F10> :Goyo<CR>
+	map <leader>f :Goyo \| set linebreak<CR>
+	inoremap <F10> <esc>:Goyo<CR>a
 
 hi clear conceal
+
+
+
+"""" Snippets
+	inoremap ;snip autocmd FileType tex,markdown.pandoc inoremap 
+""" Guides
+	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+	map <Space><Tab> <Esc>/<++><Enter>"_c4l
+	inoremap ;gui <++>
+""" Markdown
+	autocmd FileType tex,markdown.pandoc inoremap ;m $$<Space><++><Esc>2T$i
+	autocmd FileType tex,markdown.pandoc inoremap ;& <Enter>#<Space><Enter><Enter><++><Esc>2kA
+	autocmd FileType tex,markdown.pandoc inoremap ;é <Enter>##<Space><Enter><Enter><++><Esc>2kA
+	autocmd FileType tex,markdown.pandoc inoremap ;" <Enter>###<Space><Enter><Enter><++><Esc>2kA
+	autocmd FileType tex,markdown.pandoc inoremap ;i **<++><Esc>F*i
+	autocmd FileType tex,markdown.pandoc inoremap ;b ****<++><Esc>F*hi
+	autocmd FileType tex,markdown.pandoc inoremap w<Tab>  \wedge<Space>
+	autocmd FileType tex,markdown.pandoc inoremap v<Tab> \overrightarrow{}<Space><++><Esc>F{a
+
+
