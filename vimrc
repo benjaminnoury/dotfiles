@@ -4,8 +4,7 @@
 set nocompatible
 filetype off
 
-
-"""" Plugins ----------------------------------------------------------
+""" Plugins -----------------------------------------------------------
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -22,7 +21,7 @@ Plugin 'vimwiki/vimwiki'
 " ----- Vim as a programmer's text editor -----------------------------
 " Plugin 'francoiscabrol/ranger.vim'
 Plugin 'tpope/vim-dispatch'
-"Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-misc'
 "Plugin 'xolox/vim-easytags'
 "Plugin 'majutsushi/tagbar'
 "Plugin 'ctrlpvim/ctrlp.vim'
@@ -50,11 +49,11 @@ Plugin 'Raimondi/delimitMate'
  
 " ---- Pandoc/markdown Stuff ------------------------------------------
 Plugin 'dhruvasagar/vim-table-mode'
-
+Plugin 'plasticboy/vim-markdown'
 
 " Pour todo.txt
-Plugin 'elentok/todo.vim'
-Plugin 'freitass/todo.txt-vim'
+" Plugin 'elentok/todo.vim'
+" Plugin 'freitass/todo.txt-vim'
 
 " Goyo permet d'avoir une fenetre propre pour écrire
 Plugin 'junegunn/goyo.vim'
@@ -68,10 +67,16 @@ Plugin 'junegunn/goyo.vim'
 " ---- Syntax Plugins -------------------------------------------------
 Plugin 'PotatoesMaster/i3-vim-syntax'
 
+" ---- Calendrier Plugins -------------------------------------------------
+Plugin 'itchyny/calendar.vim'
+Plugin 'xolox/vim-notes'
+
+
+
+" --- Fin des plugins --------------
+
 call vundle#end()
-
 filetype plugin indent on
-
 
 " --- General settings ---
 	let mapleader=','
@@ -102,30 +107,42 @@ filetype plugin indent on
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
-set laststatus=2
+	set laststatus=2
 
 
 " ----- Raimondi/delimitMate settings -----
-let delimitMate_expand_cr = 1
-augroup mydelimitMate
-  au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-  au FileType tex let b:delimitMate_quotes = ""
-  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
-augroup END
-
-
-" Diverses options pour Pandoc
-	augroup pandoc_syntax
-		au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+	let delimitMate_expand_cr = 1
+	augroup mydelimitMate
+	  au!
+	  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+	  au FileType tex let b:delimitMate_quotes = ""
+	  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+	  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 	augroup END
 
 
-	au FileType markdown.pandoc map <F9> :w<CR>:Start! pandoc-latex % <CR>
-	au FileType markdown.pandoc inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
-	au FileType markdown.pandoc inoremap <F5> <Esc>:w<CR>:Start! make view % <CR>
-	au FileType markdown.pandoc map <F5> <Esc>:w<CR>:Start! make view % <CR>
+" Diverses options pour Pandoc
+"	augroup pandoc_syntax
+"	 au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+" 	augroup END
+
+	" Plugin Vim markdown
+	let g:tex_conceal = ""
+	let g:vim_markdown_math = 1
+	let g:vim_markdown_frontmatter = 1
+	let g:vim_markdown_folding_disabled = 1
+
+
+	nnoremap <leader>ml :%!pandoc -f markdown -t latex<CR>
+	nnoremap <leader>ml :!pandoc -f markdown -t latex<CR>
+	vnoremap <leader>lm :%!pandoc -f latex -t markdown<CR>
+	vnoremap <leader>lm :!pandoc -f latex -t markdown<CR>
+""	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown.pandoc', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+	au FileType markdown map <F9> :w<CR>:Start! pandoc-latex % <CR>
+	au FileType markdown inoremap <F9> <Esc>:w<CR>:Start! pandoc-latex % <CR>
+	au FileType markdown inoremap <F5> <Esc>:w<CR>:Start! make view % <CR>
+	au FileType markdown map <F5> <Esc>:w<CR>:Start! make view % <CR>
 
 	au FileType tex inoremap <F8> <Esc>:w<CR>:Start! xelatex % <CR>
 
@@ -137,35 +154,47 @@ augroup END
 	au FileType uml map <F9> <Esc>:w<CR>:Start! plantuml % <CR>
 
 " les notes de Calcurse sont considérés du Markdown
-autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
-autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
+	autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+	autocmd BufRead,BufNewFile ~/.calcurse/notes/* set filetype=markdown
 
 
-" Table mode settings
-let g:table_mode_corner='|'
+" Outil pour les tableaux
+	let g:table_mode_corner_corner='+'
+	let g:table_mode_header_fillchar='='
 
-" selection d'un buffer avec ,f
-nmap <leader>b :ls<CR>:e#
+" selection d'un buffer avec ,b
+	nmap <leader>b :ls<CR>:e#
 
-" Netrw est le gestionnaire de fichier de vim
-" Tweaks
-let g:netrw_banner=0		" désactive l'entête
-let g:netrw_browse_split=4	" ouvrir au premier plan
-let g:netrw_altv=1		" ouvre les splits sur la droite
-let g:netrw_liststyle=3		" tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+""" Outils de selection de fichiers """"""""""""""""""""""""""""
+""" Netrw est le gestionnaire de fichier de vim
+""" Tweaks
+	let g:netrw_banner=0		" désactive l'entête
+	let g:netrw_browse_split=4	" ouvrir au premier plan
+	let g:netrw_altv=1		" ouvre les splits sur la droite
+	let g:netrw_liststyle=3		" tree view
+	let g:netrw_list_hide=netrw_gitignore#Hide()
+	let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+""" Find dans les sous dossiers
+	set path+=**
+	set wildmenu
 
 " goyo : Écriture sans distractions
 	map <F10> :Goyo<CR>
 	map <leader>f :Goyo \| set linebreak<CR>
 	inoremap <F10> <esc>:Goyo<CR>a
 
-hi clear conceal
+""" Calendar
+	let g:calendar_date_month_name=1
+	let g:calendar_google_calendar=1
+
+""" Calculette
+	map ;bc <Esc>!!qalc<CR>dddd0df=dwjddddk$
 
 
 
-"""" Snippets
+
+"""" Snippets """"""""""""""""""""""""""""""""""""""""""""""""""""
 	inoremap ;snip autocmd FileType tex,markdown.pandoc inoremap 
 """ Guides
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
@@ -175,4 +204,5 @@ hi clear conceal
 """ Markdown
 	so ~/.vim/Nounou/mdSnippets.vim
 
+	
 

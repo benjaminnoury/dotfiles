@@ -17,7 +17,7 @@ case $Selec in
 esac
 
 [ "$Selec" = "" ] || polybar_launch
-[ "$Selec" = "" ] || wal -R -b#444444
+[ "$Selec" = "" ] || feh --bg-fill ~/.wallpaper &
 
 
 

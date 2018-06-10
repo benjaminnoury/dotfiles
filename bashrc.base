@@ -61,13 +61,14 @@ fi
 #. "~/.cache/wal/colors.sh"
 
 
-COL7="\[$(tput setaf 1)\]"
-COL5="\[$(tput setaf 5)\]"
+COL7="\[$(tput setaf 2)\]"
+COL5="\[$(tput setaf 3)\]"
 RESET="\[$(tput sgr0)\]"
 
 if [ "$color_prompt" = yes ]; then
 #	PS1='\e[1m\e[38;5;214m\w : \[\e[0m\]'
-	PS1="${COL7}\u ${COL5}\w >${RESET} "
+	#PS1="${COL7}\u ${COL5}\w >${RESET} "
+	PS1="${COL5}\w >${RESET} "
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	PS1="${PECHE}\w >${RESET} "

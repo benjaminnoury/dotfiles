@@ -1,46 +1,3 @@
-search doc
-search t
-cd /
-open_with 0
-cd  /
-man
-search man
-mkdir Films
-rename a_voir.md
-open_with a
-rename Les Revenants S01E01
-rename Les Revenants S01E02
-rename Les Revenants S01E03
-rename Les Revenants S01E04
-rename Les Revenants S01E05
-rename Les Revenants S01E06
-rename Les Revenants S01E07
-rename Les Revenants S01E08
-w
-rename Dr. Strangelove or How I Learned to Stop Worrying and Love the Bomb (1964)
-bulkrename 
-mkdir 
-mkdir Pour\ Mathilde
-mkdir Pour Mathilde
-rename Neut
-search vrac
-cd /mnt/
-search CD
-cd 
-rename Game.of.Thrones.S01E09.FRENCH.LD.HDTV.XviD-JMT.avi
-rename Game.of.Thrones.S01E10.FiNAL.FRENCH.LD.HDTV.XviD-JMT.avi
-delete
-open_with gpicview
-open_with evince
-mkdir 0 ParcoursSup
-search tmp
-cd /tmp
-shell ln -s "/home/ben/Projets/0 ParcoursSup" /home/ben/Projets/
-shell 
-rename audio-channel-front-center.oga
-rename camera-shutter.oga
-open_with 
-open_with 1
 mkdir tkinter
 find 
 mkdir Hydraulique
@@ -48,3 +5,46 @@ search day
 search gaphi
 search grap
 cd  R
+mkdir notes
+filter SUP
+rename Point de fonctionenement.sce
+rename PointDeFonctionenement.sce
+open_with 
+open_with scilab -nw
+open_with scilab-adv-cli
+open_with scilab-adv-cli %s
+shell wget -c 
+rename sujet.md
+mkdir TD_Engrenages_PrepaOraux
+search td
+save_copy_buffer 
+shell ni 
+s
+shell na
+
+shell st&
+open_with 2
+search t
+cd /mnt
+mkdir 
+cd  /tmp
+mkdir BD
+mkdir Moebius
+mkdir corrigé
+cd /tm
+cd /tmp
+open_with 1
+filter *.1
+search site
+rename Makefile
+delete
+mkdir site
+mkdir inc
+touch
+touch style.scss
+open_with vim
+make
+w
+rename Site
+shell make
+open_with 4

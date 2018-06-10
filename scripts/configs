@@ -16,7 +16,7 @@ cfa	~/.config/mutt/aliases
 cfm	~/.moc/config
 cfx	~/bin/xrandr_switch
 cffc	~/dotfiles/scripts/raccourcis.py
-cfs	~/.vim/bundle/vim-snippets/UltiSnips/tex.snippets
+cfs	~/.vim/Nounou/mdSnippets.vim
 cft	/home/ben/texmf/tex/latex/CoursNoury/recours.cls
 cfX	~/.Xdefaults
 cftd	~/bin/TdTemplate/

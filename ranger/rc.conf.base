@@ -305,7 +305,7 @@ map dU shell -p du --max-depth=1 -h --apparent-size | sort -rh
 map Yp shell -d echo -n %d/%f | xsel -i
 map Yd shell -d echo -n %d    | xsel -i
 map Yn shell -d echo -n %f    | xsel -i
-map bg shell wal -a 80 -b#444444 -ci %%f
+map bg shell wal-set %%f
 map ni shell cp /home/ben/Modèles/image.tex %d/
 map bi shell beet import %d
 # Filesystem Operations
